@@ -50,12 +50,15 @@ body {
     
     font-size: 2.5rem;
     padding-left: 15px;
+    
 }
 
     #brian_content p {
     font-size: 1.5rem;
+    width: 100px;
     max-width: fit-content;
     padding-left: 15px;
+    
 }
 
     img{width: 200px;height: auto;}
