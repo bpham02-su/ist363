@@ -56,7 +56,7 @@ body {
     font-size: 1.25rem;
     width: 75%;
     padding-left: 35px;
-    
+    text-wrap: wrap;
 }
 
     img{width: 200px;height: auto;}
