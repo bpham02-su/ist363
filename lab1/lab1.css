@@ -19,9 +19,8 @@
 
 #brian_content p {
     font-size: 2rem;
-    height:auto;
-    width:755px;
-    max-width: fit-content;
+    width:750px;
+    height: auto;
 }
 
 .center{padding-bottom: 40px;padding-top: 40px;}
@@ -55,9 +54,10 @@ body {
 
     #brian_content p {
     font-size: 1rem;
-    width: 250px;
+    width: 315px;
     height:auto;
     padding-left: 15px;
+    padding-right:15px;
     
 }
 
