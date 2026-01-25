@@ -21,6 +21,7 @@
     font-size: 2rem;
     width:750px;
     height: auto;
+    text-wrap: wrap;
 }
 
 .center{padding-bottom: 40px;padding-top: 40px;}
@@ -48,16 +49,15 @@ body {
     h1 {
     
     font-size: 2.5rem;
-    padding-left: 15px;
+    padding-left: 35px;
     
 }
 
     #brian_content p {
     font-size: 1rem;
-    width: 315px;
+    width: 75%;
     height:auto;
-    padding-left: 15px;
-    padding-right:15px;
+    padding-left: 35px;
     
 }
 
