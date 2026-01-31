@@ -1,0 +1,163 @@
+@use "partials/variables";
+@use "partials/mixins";
+@use "partials/rest";
+
+
+
+
+@keyframes zoomin {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
+}
+header{
+    padding-top: 10px;
+    padding-bottom: 17px;
+    text-align: center;
+    background-color: variables.$orange;
+    color:white;
+    font-family: variables.$font_1;
+    nav{
+        a{
+            display: inline-block; 
+            margin:5px;
+            color:white;
+            text-decoration: none;
+            &:hover{
+            animation: zoomin 0.3s forwards;
+            }
+        }
+        
+        
+    }
+}
+
+%recipe_layout{
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly ;
+    @include mixins.style;
+    
+    div{
+        font-weight: bold;
+        font-size:1.5rem;
+        display:flex;
+        flex-direction:column;
+        text-align: center;
+        border-radius: 1em;
+        padding-bottom:50px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        img{
+            width:275px;
+            height:auto;
+            border-radius: 1em 1em 0 0;
+            margin-bottom: 35px;
+        }
+    }
+}
+.latest_recipes{
+    @extend %recipe_layout;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.older_recipes{
+    @extend %recipe_layout;
+    margin-top: 45px;
+    margin-bottom: 70px;
+}
+
+
+form input[type="email"]{
+    width: 275px;
+
+}
+#about_us{
+    img{max-width: 100%;border-radius: 1em;margin-top: 20px;}
+
+}
+
+
+.newsletter{
+    text-align: center;
+    margin-top:25px;
+    background-color: variables.$lime;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-family: variables.$font_1;
+    border-radius: 1em;
+    margin:15px;
+    button{
+    @include mixins.button;
+}
+}
+
+
+#about_us{
+    text-align: center;
+    margin: 15px;
+    @include mixins.style;
+        button{
+    @include mixins.button;
+}
+}
+
+footer{
+    
+    text-align: center;
+    background-color: variables.$mint;
+    color:white;
+    padding: 10px;
+    font-family: variables.$font_1;
+    padding-bottom: 20px;
+    p{
+        padding-top: 10px;
+    }
+    a{
+        margin: 10px;
+        color:white;
+        text-decoration: none;
+        margin-bottom: 5px;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 768px){
+    header,.newsletter, #about_us, footer{
+        max-width: 100%;
+    }
+
+    form input[type="email"]{
+    margin-bottom: 10px;
+
+}
+    .older_recipes,.latest_recipes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest_recipes, .older_recipes{
+        div{
+            margin-bottom: 25px;
+        }
+        
+    }
+
+    %recipe_layout{
+        h2{
+          margin-right: 46.5%;
+        }
+        div{
+          
+            img{
+                width:355px;
+                max-width:100%;
+            }
+        }
+    }
+}
