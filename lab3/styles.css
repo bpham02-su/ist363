@@ -454,6 +454,9 @@ footer a {
   .latest_recipes div, .older_recipes div {
     margin-bottom: 25px;
   }
+  footer {
+    padding-bottom: 20px;
+  }
   .latest_recipes h2, .older_recipes h2 {
     margin-right: 46.5%;
   }
