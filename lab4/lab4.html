@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://cdn.tailwindcss.com"></script>
+    <title>Lab4</title>
+    <style type="text/tailwindcss">
+         @layer components {
+            .featured_box {
+                @apply p-5 scale-90 md:scale-75 border rounded-lg shadow-2xl max-[768px]:w-96 max-w-xl
+            }
+            .featured_header{
+                @apply text-2xl font-bold mt-3
+            }
+            .headline_box{
+                @apply border pr-20 pl-4 pt-2 pb-2 rounded-lg shadow-xl mb-3
+            }
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <header class = "bg-indigo-900 flex py-4 justify-between w-full">
+        <h1 class = "text-3xl font-bold ml-5"><span class = "text-yellow-500">Orange</span> <span class = "text-white">News</span></h1>
+        
+        <nav class="flex text-white mt-2 mr-3 gap-6 max-[768px]:hidden">
+            <a href = "*">Home</a>
+            <a href = "*">Latest</a>
+            <a href = "*">Scores</a>
+            <a href = "*">Videos</a>
+            <a href = "*">More</a>
+        </nav>
+    </header>
+        <main>
+            <section class="p-10 max-[768px]:p-5 max-[768px]:max-w-sm max-[768px]:mx-auto">
+    
+                <img src="images/campus.jpg" alt="Campus Photo" class="w-full rounded-t-md">
+
+                <div class="bg-[#1a2230] min-h-[128px] h-auto text-white pl-7 pr-7 rounded-b-md pb-5">
+                    <h1 class="pt-7 font-bold text-2xl md:text-3xl leading-tight">Will the Snow Ever Thaw?</h1>
+                    <p class="text-sm md:text-lg mt-2 opacity-90">Get the latest scoop on the weather and everything that effects the jet stream.</p>
+                </div>
+    
+            </section>
+            <section class ="flex flex-col item-start ">
+              <h2 class ="text-2xl font-bold ml-5 md:ml-20 max-[768px]:mb-7">More Featured Stories</h2>  
+              <div class = "flex -mt-10 -ml-9 max-[768px]:flex-col justify-center ">
+                <div class = "featured_box ml-10">
+                    <img src ="images/graduates.jpg" alt ="Graduated Students" class = "rounded-lg">
+                    <h3 class = "featured_header">Graduation 2025</h3>
+                    <p class = "text-xl">Invite your friends and family to join us in May. </p>
+                </div>
+                 <div class = "featured_box -ml-24 max-[768px]:ml-10 ">
+                    <img src ="images/runners.jpg" alt ="SU Colleagues Running"  class = "rounded-lg">
+                    <h3 class = "featured_header">Workplace Run</h3>
+                    <p class = "text-xl">Run a 5k with your colleagues</p>
+                </div>
+                <div class = "featured_box -ml-24 max-[768px]:ml-10">
+                    <img src ="images/artshow.jpg" alt="SU Artshow"  class = "rounded-lg">
+                    <h3 class = "featured_header">Art Show</h3>
+                    <p class = "text-xl">The best of the art of the year display on Schaffer.</p>
+                </div>
+              </div>
+            </section>
+            <div class="flex ml-9 justify-between max-[768px]:ml-1 max-[768px]:flex-col ">
+                <section class="ml-10 max-[768px]:ml-0 max-[768px]:px-4">
+                    <h2 class="text-2xl font-bold mb-5">Top Headlines</h2>
+                    
+                    <div class="headline_box max-[768px]:bg-white max-[768px]:p-5 max-[768px]:mb-4 max-[768px]:rounded-lg max-[768px]:shadow-lg max-[768px]:border max-[768px]:border-gray-100">
+                        <h3 class="text-lg font-bold">Player X Breaks Record</h3>
+                        <p>The record-breaking performance from Player X stunned fans everywhere...</p>
+                    </div>
+
+                    <div class="headline_box max-[768px]:bg-white max-[768px]:p-5 max-[768px]:mb-4 max-[768px]:rounded-lg max-[768px]:shadow-lg max-[768px]:border max-[768px]:border-gray-100">
+                        <h3 class="text-lg font-bold">Team Y Wins Championship</h3>
+                        <p>In an epic showdown, Team Y came out on top with a historic victory...</p>
+                    </div>
+
+                    <div class="headline_box max-[768px]:bg-white max-[768px]:p-5 max-[768px]:rounded-lg max-[768px]:shadow-lg max-[768px]:border max-[768px]:border-gray-100">
+                        <h3 class="text-lg font-bold">Athlete Z Announces Retirement</h3>
+                        <p>Athlete Z's retirement shocked the sports world...</p>
+                    </div>
+            </section>
+                <section class="w-full max-[768px]:px-4 md:w-5/12 md:mr-36">
+  <h2 class="text-2xl font-bold">Game Scores</h2>
+  
+  <div class="flex flex-col border mt-5 pt-5 px-5 rounded-md shadow-xl max-[768px]:bg-white max-[768px]:shadow-2xl max-[768px]:border-gray-100">
+    
+    <div class="flex justify-between border-b-2 max-[768px]:border-b max-[768px]:border-gray-100 w-full pb-1">
+      <h3 class="font-bold">Game</h3>
+      <h3 class="font-bold">Score</h3>
+    </div>
+
+    <div class="flex justify-between mt-2">
+      <div class="flex flex-col gap-3 max-[768px]:gap-6 pb-6">
+        <p>Women's Hockey vs Miami</p>
+        <p>Men's Lacrosse vs St Bonaventure</p>
+        <p>Men's Basketball vs Duke</p>
+      </div>
+      
+      <div class="flex flex-col gap-3 max-[768px]:gap-6 text-right">
+        <p>3 - 1</p>
+        <p>7 - 18</p>
+        <p>98 - 75</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+            </div>
+
+            <footer class="mt- bg-gray-900 min-h-60 m-4 md:m-10 p-8 text-white rounded-lg">
+                <h2 class="text-2xl font-medium mb-3">Subscribe to Our Newsletter</h2>
+                <p class="mb-5 max-w-md">Stay updated with the latest news, scores, and exclusive content delivered straight to your inbox!</p>
+                
+                <form action="#" class="flex flex-col md:flex-row md:items-center">
+                    <input type="email" placeholder="Enter your email" 
+                        class="w-full md:w-7/12 h-12 md:h-10 text-black px-4
+                                rounded-lg md:rounded-none md:rounded-l-lg mb-3 md:mb-0">
+                    
+                    <button type="submit" 
+                            class="text-black bg-yellow-400 h-12 md:h-10 px-8
+                                w-2/3 md:w-auto
+                                rounded md:rounded-none md:rounded-r-lg 
+                                md:-ml-1">
+                        Subscribe
+                    </button>
+                </form>
+            </footer>
+
+        </main>
+
+
+    
+    
+</body>
+</html>
