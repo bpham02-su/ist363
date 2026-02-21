@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(243, 197, 114);
+}
+
+.space_head_bp{
+    margin-top:15px;
+    font-size: 1.5em;
+    
+}
+
+.space_font_bp{
+    margin-top: 50px;
+    padding-top: 35px;
+    background-color: rgb(250, 159, 14);
+    padding-bottom: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 2em;
+    margin-bottom: 50px;
+}
+.space_font_bp div div{
+
+    border-radius: 3em;
+    padding-bottom: 35px;
+}
+.space_font_bp div img{
+
+    border-radius: 3em;
+}
+.space_font_bp button{
+    background-color: rgb(3, 3, 154);
+}
+
+.montserrat-bp {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: rgb(3, 3, 154);
+}
+
+@media screen and (max-width: 798px) {
+    .grid-container {
+        width: 90%; /* Forces the container to be narrower than the screen */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
