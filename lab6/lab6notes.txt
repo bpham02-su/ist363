@@ -1,0 +1,7 @@
+Bootstrap Part 2
+
+Customizing Bootstrap:
+
+Adding Sass variables to bootstrap is more recommended
+
+
