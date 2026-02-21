@@ -1,0 +1,18 @@
+$primary: rgb(5, 7, 89);
+$secondary: rgb(185, 195, 249);
+$info: rgb(88, 91, 95);
+@import "../bootstrap-modules/node_modules/bootstrap/scss/bootstrap.scss";
+
+// header, footer {
+//   background-color: $header_footer-color;
+// }
+.custom-carousel-height {
+    height: auto; /* Or set a smaller height like 300px */
+}
+
+/* Desktop view (Medium screens and up) */
+@media (min-width: 768px) {
+    .custom-carousel-height {
+        height: 467px;
+    }
+}
