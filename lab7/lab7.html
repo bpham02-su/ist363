@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //#1
+        let favNumber = 23;
+        console.log("My favorite number is "+ favNumber +".")
+
+        //#2
+        let favoriteFoods = ["sushi","pho","popeyes chicken", "steak"]
+        console.log(favoriteFoods[1])
+        favoriteFoods.push("purple doritos with milk")
+        console.log(favoriteFoods)
+
+        //#3
+        for (let i = 0; i < favoriteFoods.length; i++){
+            console.log("Favorite Food: "+ (i+1)+ " "+ favoriteFoods[i])
+        }
+
+        //#4
+
+        for (let i = 0; i < favoriteFoods.length; i++){
+            if (favoriteFoods[i] !== favoriteFoods[1]){
+                console.log("Favorite Food: "+ (i+1)+ " "+ favoriteFoods[i])
+            }
+        }
+
+        //#5
+        let book = {
+            title:"The Heart is a Lonely Hunter",
+            author: "Carson McCullers",
+            yearPublished: 1940,
+            isAvailable: true
+        };
+
+        console.log(book.title + " and " + book.author)
+
+        if (book["isAvailable"] === true){
+            console.log("This book is avaiable for checkout.")
+        }else{
+            console.log("Sorry, this book is currently checked out.")
+        }
+
+
+        //#6
+
+        let count = 0;
+        while (count <=20){
+            if (count%2 === 0){
+                console.log(count)
+                
+            }
+            count++;
+        } //includes 20 btw idk what you mean by stop at 20 
+
+        //#7
+        let randomNumber = Math.floor(Math.random()*6) +1
+        console.log(randomNumber)
+
+
+    </script>
+</head>
+<body>
+    <p>Answers in the console</p>
+</body>
+</html>
