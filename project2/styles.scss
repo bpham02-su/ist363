@@ -1,0 +1,213 @@
+@import "../bootstrap-modules/node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity :100%;
+    }
+
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity :0%;
+    }
+
+}
+
+
+@keyframes blurred_zoom{
+    from{
+        transform: scale(1.00);
+        filter: blur(0px);
+    }
+    to{
+        transform: scale(1.01);
+        filter :blur(5px);
+    }
+
+}
+
+@keyframes hover_zoom{
+    from{
+        transform: scale(1.00);
+    }
+    to{
+        transform: scale(1.01);
+    }
+
+}
+
+
+@keyframes slideToLeft{
+    from{
+        transform: translateX(0);
+
+    }
+    to{
+        transform: translateX(-35%);
+    }
+
+
+}
+
+@keyframes slideNoneMobile {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+main{
+    position: relative;
+    z-index: 0;
+}
+
+main::before{
+    content :"";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/game_background.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: filter 1.25s ease-in-out, transform 1.25s ease-in-out;
+    z-index: -1; 
+
+}
+main.blur-bg::before {
+    filter: blur(10px);
+    transform: scale(1.01); 
+}
+
+
+
+#game_logo_scale{
+    height: 300px;
+    width:300px
+}
+
+
+.logoStart{
+    margin-top: -9.5rem;
+    opacity: 0;
+    animation: fadeIn 1.75s ease-in-out forwards;
+}
+
+.gameStart{
+    opacity: 0;
+    animation: fadeIn 1.75s ease-in-out forwards;
+    animation-delay: 1.75s;
+}
+
+
+.fadeOut{
+    animation: fadeOut 1.25s ease-in-out forwards;
+}
+
+.blurred{
+    animation: blurred_zoom 1.25s ease-in-out forwards;
+}
+
+
+.show_question{
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+.custom-text-shadow {
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+.link {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  display: inline-block;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+
+#country_1_text, #country_2_text{
+    text-shadow: 1px 1px 3px #000000;
+}
+#country_1,#country_2{
+    transition: all .3s ease-in-out;
+
+}
+
+#country_1:hover, #country_2:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+.correct_filter{
+    transform: scale(1.03);
+}
+
+.incorrect_filter{
+    filter: grayscale(100%);
+    transform:scale(.87);
+}
+
+
+.flagMove{
+    animation: slideToLeft 1.25s ease-in-out forwards;
+}
+
+#rest_button a{
+    text-decoration:none;
+    color: white;
+}
+
+#info-card_1, #info-card_2 {
+    font-size: 1.75rem; 
+}
+
+
+@media (max-width: 767px) {
+    #info-card_1, #info-card_2 {
+        font-size: 0.9rem; 
+        margin-top: 1rem; 
+    }
+
+
+    .flagMove {
+        animation: slideNoneMobile 1.25s ease-in-out forwards;
+    }
+
+    #section_1, #section_2 {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    #info-card_1 ul, #info-card_2 ul {
+        padding-left: 0;
+    }
+}
