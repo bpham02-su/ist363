@@ -117,17 +117,17 @@
     
 
     <script>
-        let firstCountry;
-        let secondCountry;
-        let playerScore = 0;
-        let globalUsername = "";
+        let firstCountry
+        let secondCountry
+        let playerScore = 0
+        let globalUsername = ""
 
         function homeScreenTransition(){
                 const usernameInput = document.getElementById("username")
-                const enteredName = usernameInput.value.trim();
+                const enteredName = usernameInput.value.trim()
                 if (enteredName === "") {
                     alert("Please enter a username before playing!")
-                    return; 
+                    return
                 }
                 globalUsername = enteredName
 
@@ -160,7 +160,7 @@
                                 const scoreTrack = document.getElementById("score")
                                 scoreTrack.classList.remove("d-none")
                                 scoreTrack.classList.add("show_question")
-                                getAvatar();
+                                getAvatar()
 
                             },1250)
                         }, 1250)
@@ -183,7 +183,7 @@
                 const avatarImg = document.getElementById("user_avatar")
                 const avatarCont = document.getElementById("avatar_container")
                 const displayName = document.getElementById("display_name")
-                avatarImg.src = mascotUrl;
+                avatarImg.src = mascotUrl
                 displayName.innerText = `Player: ${globalUsername}`
 
                 avatarCont.classList.remove("d-none")
@@ -238,19 +238,19 @@
 
         function countryCorrect(chosenNumber){
 
-            let pop1 = firstCountry.population;
-            let pop2 = secondCountry.population;
+            let pop1 = firstCountry.population
+            let pop2 = secondCountry.population
             let firstFlag = document.getElementById("first_flag")
             let secondFlag = document.getElementById("second_flag")
 
             let gameTitle = document.getElementById("game_question_2")
 
-            let winningNumber;
+            let winningNumber
 
             if (pop1 > pop2) {
-                winningNumber = 1;
+                winningNumber = 1
             } else {
-                winningNumber = 2;
+                winningNumber = 2
             }
 
 
@@ -267,10 +267,10 @@
 
             if (chosenNumber === winningNumber){
     
-                playerScore++;
+                playerScore++
                 showInfo()
                 gameTitle.innerHTML ="Correct!"
-                gameTitle.classList.remove("text-light");
+                gameTitle.classList.remove("text-light")
                 gameTitle.classList.add("text-success")
                 document.getElementById("score").innerText = `Score: ${playerScore}`
                     setTimeout(()=>{
@@ -280,7 +280,7 @@
             }else{
                 showInfo()
                 gameTitle.innerHTML ="Game Over!"
-                gameTitle.classList.remove("text-light");
+                gameTitle.classList.remove("text-light")
                 gameTitle.classList.add("text-danger")
                 document.getElementById("score").classList.add("d-none")
                 document.getElementById("avatar_container").classList.add("d-none")
@@ -304,7 +304,7 @@
                 "info-card_2",
                 "country_1", 
                 "country_2"
-            ];
+            ]
 
             for (let i = 0; i < elementsToReset.length; i++) {
                 let elementId = elementsToReset[i]
@@ -325,7 +325,7 @@
 
             const gameTitle = document.getElementById("game_question_2")
             gameTitle.classList.remove("text-success", "text-danger")
-            gameTitle.classList.add("text-light");
+            gameTitle.classList.add("text-light")
 
             setTimeout(() => {
                 loadCountryData()
@@ -334,7 +334,7 @@
                 document.getElementById("first_flag").classList.add("show_question")
                 document.getElementById("second_flag").classList.add("show_question")
                 gameTitle.classList.add("show_question")
-            }, 1000);
+            }, 1000)
         }
 
 
@@ -364,7 +364,7 @@
                     let currencyNamesTwo = Object.values(secondCountry.currencies).map(c => c.name)
                     document.getElementById("currency2").innerText = `Currencie(s): ${currencyNamesTwo.join(", ")}`
                 } else {
-                    document.getElementById("currency2").innerText = "Currencie(s): N/A";
+                    document.getElementById("currency2").innerText = "Currencie(s): N/A"
                 }
 
                 if (firstCountry.languages) {
