@@ -47,7 +47,7 @@
         <section class = "text-center">
             <h1 class = "text-light fs-1 gameStart custom-text-shadow" id ="game_question">Do you know who has the higher population?</h1>
             <div class = "align-items-center justify-content-center flex-wrap" id="section_1">
-                <div id = "country_1" class = "d-none mt-5">
+                <div id = "country_1" class = "d-none">
                     <img id ="first_flag" onclick="countryCorrect(1)">
                     <p id = "country_1_text" class = "text-light fs-4 mb-3 fw-bold"></p>
                 </div>
@@ -135,6 +135,7 @@
                 document.getElementById("game_logo").classList.add("fadeOut")
                 document.getElementById("game_question").classList.add("fadeOut")
                 document.getElementById("game_button").classList.add("fadeOut")
+                document.getElementById("country_1").classList.add("mt-5")
                 document.querySelector("main").classList.add("blur-bg")
                 loadCountryData()
                 setTimeout(() => {
