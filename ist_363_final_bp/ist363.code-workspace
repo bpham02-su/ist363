@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "ist363",
+			"path": ".."
+		},
+		{
+			"name": "ist_363_final",
+			"path": "D:/ist_363_final"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ist363"
+	}
+}

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.reco_title {
+    font-size: 1.75em;
+    color: rgb(235, 235, 235);
+    font-family: "Press Start 2P", system-ui;
+}
+
+
+body{
+    font-family: "Nunito", sans-serif;
+}
+.reco_header {
+    background-color: rgb(245, 42, 42);
+    font-size: 1.15em;
+    font-family: "Nunito", sans-serif;
+}
+
+.main {
+    background-color: rgb(32, 30, 30);
+    color: antiquewhite;
+    flex: 1;
+    position: relative;
+}
+
+.main_h1 {
+    font-size: 4.5em;
+    text-decoration: underline;
+    font-family: "Press Start 2P", system
+}
+
+.reco_header nav a {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+}
+
+.reco_header nav a:hover {
+    color: #000000;
+}
+
+.reco_footer {
+    background-color: hsl(0, 0%, 99%);
+    padding-bottom: 1rem;
+    color: #333;
+}
+
+
+.footer_deco a{
+    color: blue;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .page {
+        transform: scale(80%);
+    }
+}

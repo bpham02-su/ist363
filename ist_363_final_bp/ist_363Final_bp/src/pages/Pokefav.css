@@ -1,0 +1,21 @@
+.favoritesPage {
+    min-height: 100vh;
+    position: relative;
+}
+
+.favoritesPage::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('../assets/pokebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+.favoritesPage .container {
+    position: relative;
+    z-index: 1;
+}
